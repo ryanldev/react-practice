@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Interview Prep
+
+Hands-on exercises for senior front-end interview preparation. Built with Next.js 15 and TypeScript.
+
+Designed for developers coming from Svelte/SvelteKit — each exercise maps React concepts to their Svelte equivalents.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the exercise index.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Curriculum
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Phase 1: Fundamentals 
+| # | Exercise | Route | Concepts |
+|---|----------|-------|----------|
+| 1 | JSX & Props | `/exercises/01-props` | Props, spreading, children, destructuring |
+| 2 | useState & Events | `/exercises/02-state` | State, updater functions, event handlers |
+| 3 | Conditional Rendering & Lists | `/exercises/03-lists` | .map() with keys, ternaries, derived state |
+| 4 | useEffect & Lifecycle | `/exercises/04-effects` | Effects, cleanup, useLayoutEffect |
+| 5 | useRef & forwardRef | `/exercises/05-refs` | Refs, forwardRef, useImperativeHandle |
+| 6 | Forms & Controlled Components | `/exercises/06-forms` | Controlled inputs, validation, TS event types |
 
-## Learn More
+### Phase 2: Intermediate Patterns 
+| # | Exercise | Route | Concepts |
+|---|----------|-------|----------|
+| 7 | Component Composition | `/exercises/07-composition` | Portals, compound components, polymorphic components |
+| 8 | useContext & State Sharing | `/exercises/08-context` | Context, provider pattern, context optimization |
+| 9 | useReducer | `/exercises/09-reducer` | Reducers, dispatch, discriminated unions |
+| 10 | Performance | `/exercises/10-performance` | useMemo, useCallback, React.memo, virtualization |
+| 11 | Custom Hooks | `/exercises/11-custom-hooks` | useDebounce, useLocalStorage, useFetch |
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 3: Advanced & Interview-Specific 
+| # | Exercise | Route | Concepts |
+|---|----------|-------|----------|
+| 12 | Data Fetching Patterns | `/exercises/12-data-fetching` | Pagination, AbortController, optimistic updates |
+| 13 | Error Boundaries | `/exercises/13-error-boundary` | Class components, componentDidCatch, fallback UI |
+| 14 | Suspense & Concurrent Features | `/exercises/14-suspense` | React.lazy, useTransition, Server Components |
+| 15 | Accessibility | `/exercises/15-accessibility` | ARIA, keyboard nav, focus trap, useId |
+| 16 | Common Interview Components | `/exercises/16-interview-components` | Autocomplete, InfiniteScroll, Tooltip, Drag & Drop |
+| 17 | Patterns & Anti-Patterns | `/exercises/17-patterns` | Lifting state, HOCs, key prop reset |
+| 18 | Testing | `/exercises/18-testing` | React Testing Library, user-event, jest-axe |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Phase 4: Capstone 
+A project dashboard app at `/dashboard` that combines all concepts into a single application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How to Use
 
-## Deploy on Vercel
+Each exercise page contains detailed instructions in comments at the top of the file, including:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Step-by-step tasks to complete
+- Svelte-to-React concept mappings
+- Code hints and API signatures
+- Links to official React documentation
+- Key concepts and common mistakes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open the exercise file, read the comments, and build below the `{/* START HERE */}` marker.
+
+See [CURRICULUM.md](./CURRICULUM.md) for the full curriculum with cheat sheet.

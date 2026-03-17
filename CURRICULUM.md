@@ -1,7 +1,7 @@
 # React Interview Prep Curriculum
-> For developers coming from Svelte/SvelteKit — 1-2 week timeline
+> For developers coming from Svelte/SvelteKit
 
-## Phase 1: React Fundamentals (Days 1-3)
+## Phase 1: React Fundamentals
 *Standalone exercises — one route per concept*
 
 ### Exercise 1: JSX & Props (`/exercises/01-props`)
@@ -51,7 +51,7 @@
 
 ---
 
-## Phase 2: Intermediate Patterns (Days 4-6)
+## Phase 2: Intermediate Patterns
 *Standalone exercises transitioning toward the capstone app*
 
 ### Exercise 7: Component Composition (`/exercises/07-composition`)
@@ -93,7 +93,7 @@
 
 ---
 
-## Phase 3: Advanced & Interview-Specific (Days 7-10)
+## Phase 3: Advanced & Interview-Specific
 *Building toward the capstone*
 
 ### Exercise 12: Data Fetching Patterns (`/exercises/12-data-fetching`)
@@ -153,7 +153,7 @@
 
 ---
 
-## Phase 4: Capstone App (Days 10-14)
+## Phase 4: Capstone App
 *Combines everything into one project*
 
 ### Capstone: Project Dashboard (`/dashboard`)
