@@ -1,3 +1,5 @@
+"use client"
+
 /*
  * EXERCISE 2: useState & Events
  * Svelte equivalent: `let count = 0` (reactive by default)
@@ -33,6 +35,9 @@
  * - Responding to Events: https://react.dev/learn/responding-to-events
  */
 
+import { useState, Dispatch, SetStateAction } from "react";
+import styles from './page.module.css';
+
 export default function StateExercise() {
   return (
     <div>
@@ -40,7 +45,78 @@ export default function StateExercise() {
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
         Build your components below. Read the comments at the top of this file for instructions.
       </p>
-      {/* START HERE */}
+      <div className={styles.container}>
+        <Counter />
+        <ToggleGroup options={[{id: 1, value: 'button-1'}, {id: 2, value: 'button-2'}, {id: 3, value: 'button-3'}]} />
+        <UserForm></UserForm>
+      </div>
     </div>
   );
+}
+
+// Task 1
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className={styles.Counter}>
+      <p className={styles.count}>{count}</p>
+      <div className={styles.buttonGroup}>
+        <button className={styles.button} onClick={() => setCount(prev => prev + 1)}>+</button>
+        <button className={styles.button} onClick={() => setCount(prev => Math.max(prev - 1, 0))}>-</button>
+        <button className={styles.button} onClick={() => setCount(0)}>Reset</button>
+      </div>
+    </div>
+  )
+}
+
+// Task 2
+function ToggleGroup({options}: {options: {id: number, value: string}[]}) {
+  const [active, setActive] = useState<string | null>(null);
+
+  return (
+    <div className={styles.buttonGroup}>
+      {options.map((option) =>
+        <Toggle key={option.id} value={option.value} active={active} setActive={setActive}></Toggle>
+      )}
+    </div>
+  )
+}
+
+function Toggle({value, active, setActive}: {value: string, active: string | null, setActive: Dispatch<SetStateAction<string | null>>}) {
+  return (
+    <button className={`${styles.button} ${active === value ? styles.active : ''}`} onClick={() => setActive(value)}>
+      {value}
+    </button>
+  )
+}
+
+// Task 3
+type User= {
+  firstName: string,
+  lastName: string,
+  age: number
+}
+
+function UserForm() {
+  const [user, setUser] = useState<User>({ firstName: '', lastName: '', age: 0 });
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+    setUser(prev => ({ ...(prev ?? {}), [name]: value }));
+  }
+
+  return (
+    <form className={styles.form} onSubmit={(event) => event.preventDefault()}>
+      <label>Form Title</label>
+      <input name="firstName" value={user?.firstName} onChange={handleChange} />
+      <input name="lastName" value={user?.lastName} onChange={handleChange} />
+      <input name="age" value={user?.age} onChange={handleChange} />
+      <div className={styles.formValueGroup}>
+        <span>First name: {user?.firstName}</span>
+        <span>Last name: {user?.lastName}</span>
+        <span>Age: {user?.age}</span>
+      </div>
+    </form>
+  )
 }

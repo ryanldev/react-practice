@@ -34,6 +34,21 @@
  * - JavaScript in JSX: https://react.dev/learn/javascript-in-jsx-with-curly-braces
  */
 
+import styles from "./page.module.css";
+
+type Profile = {
+  id: number,
+  name: string,
+  role: string,
+  avatarUrl: string
+}
+
+const mockProfiles: Profile[] = [
+  { id: 1, name: "Ada Lovelace", role: "Engineer", avatarUrl: "https://i.pravatar.cc/150?u=ada" },
+  { id: 2, name: "Grace Hopper", role: "Scientist", avatarUrl: "https://i.pravatar.cc/150?u=grace" },
+  { id: 3, name: "Margaret Hamilton", role: "Director", avatarUrl: "https://i.pravatar.cc/150?u=margaret" },
+]
+
 export default function PropsExercise() {
   return (
     <div>
@@ -41,7 +56,26 @@ export default function PropsExercise() {
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
         Build your components below. Read the comments at the top of this file for instructions.
       </p>
-      {/* START HERE */}
+      <ProfileList profiles={mockProfiles} />
+    </div>
+  );
+}
+
+function ProfileList({profiles}: {profiles: Profile[]}) {
+  return (
+    <div>
+      {profiles.map(profile => <ProfileCard key={profile.id} {...profile} />)}
+    </div>
+  )
+}
+
+function ProfileCard({children, name, role, avatarUrl='https://i.pravatar.cc/150?u=ada'}: React.PropsWithChildren<Omit<Profile, 'id'>>) {
+  return (
+    <div className={styles.ProfileCard}>
+      <img src={avatarUrl} alt={`${name}'s avatar`} />
+      <p>{name}</p>
+      <p>{role}</p>
+      {children}
     </div>
   );
 }

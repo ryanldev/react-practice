@@ -28,6 +28,9 @@ const exercises = {
   "Phase 3.5: Testing": [
     { href: "/exercises/18-testing", label: "18. Testing React Components", desc: "React Testing Library, user-event, mocking, a11y testing" },
   ],
+  "Interview Simulation": [
+    { href: "/exercises/interview-practice", label: "CODE-FE Practice Round", desc: "Search & filter, form + optimistic UI, dependent dropdowns, autocomplete with debounce & shared state" },
+  ],
   "Phase 4: Capstone": [
     { href: "/dashboard", label: "Project Dashboard", desc: "Full app combining all concepts" },
   ],
