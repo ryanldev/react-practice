@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/01-props
+
 /*
  * EXERCISE 1: JSX & Props
  * Svelte equivalent: `export let prop` and template syntax

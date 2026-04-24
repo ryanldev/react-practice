@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/13-error-boundary
+
 /*
  * EXERCISE 13: Error Boundaries
  * React-specific — no Svelte equivalent

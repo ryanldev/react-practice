@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/03-lists
+
 /*
  * EXERCISE 3: Conditional Rendering & Lists
  * Svelte equivalent: {#if}, {#each}

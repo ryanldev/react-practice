@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/16-interview-components
+
 /*
  * EXERCISE 16: Common Interview Components
  * These are the "build X in 45 minutes" problems — practice until muscle memory

@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/06-forms
+
 /*
  * EXERCISE 6: Forms & Controlled Components
  * Svelte equivalent: bind:value (two-way binding)

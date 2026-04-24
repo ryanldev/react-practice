@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/14-suspense
+
 /*
  * EXERCISE 14: Suspense, Lazy Loading & Concurrent Features
  * React 18+ — increasingly asked about in interviews

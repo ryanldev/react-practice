@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/10-performance
+
 /*
  * EXERCISE 10: Performance — useMemo, useCallback, React.memo
  * Svelte equivalent: Svelte handles this automatically

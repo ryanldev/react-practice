@@ -1,5 +1,7 @@
 "use client"
 
+// http://localhost:3000/exercises/02-state
+
 /*
  * EXERCISE 2: useState & Events
  * Svelte equivalent: `let count = 0` (reactive by default)

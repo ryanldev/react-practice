@@ -1,3 +1,5 @@
+// http://localhost:3000/exercises/17-patterns
+
 /*
  * EXERCISE 17: React Patterns & Anti-Patterns
  * High-value interview knowledge — more conceptual, less building
