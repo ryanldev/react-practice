@@ -1,10 +1,19 @@
 /*
  * TASK 4 — TextInput with forwardRef
- * Build a reusable <TextInput> that forwards its ref to the underlying <input>.
- * - forwardRef((props, ref) => <input ref={ref} {...props} />)
- * - Allows parent components to call .focus(), .select() etc. on the input directly
+ *
+ * Build a reusable text input component that exposes its underlying DOM node
+ * to parent components via a forwarded ref.
+ *
+ * API: forwardRef
+ *
+ * DOCS: https://react.dev/reference/react/forwardRef
  */
+
 import { forwardRef } from "react";
+
 export const TextInput = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
-  function TextInput(props, ref) { return null; }
+  function TextInput(props, ref) {
+    // Build your component here
+    return null;
+  }
 );

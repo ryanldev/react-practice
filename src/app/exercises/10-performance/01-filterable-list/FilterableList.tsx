@@ -1,20 +1,20 @@
 /*
- * TASK 1-2 — FilterableList
- * Demonstrate the re-render problem and fix it step by step.
+ * TASKS 1, 2 & 4 — FilterableList
  *
- * STEP 1: Build a list with a search input where every keystroke re-renders
- *   all list items unnecessarily.
- * STEP 2: Fix with:
- *   - useMemo for the filtered list
- *   - useCallback for event handlers passed to children
- *   - React.memo on the list item component
+ * First build a filterable list where every keystroke causes unnecessary re-renders.
+ * Then fix it. Also include a sibling component that demonstrates when memoization
+ * is NOT needed.
  *
- * TASK 4 also lives here: add a sibling component that proves memoization
- * is NOT always needed (e.g. a counter that re-renders without issue).
+ * Hooks: useState, useMemo, useCallback
+ * API: React.memo
  *
  * DOCS:
  * - useMemo: https://react.dev/reference/react/useMemo
  * - useCallback: https://react.dev/reference/react/useCallback
  * - React.memo: https://react.dev/reference/react/memo
  */
-export function FilterableList() { return null; }
+
+export function FilterableList() {
+  // Build your component here
+  return null;
+}

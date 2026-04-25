@@ -1,12 +1,16 @@
 /*
  * TASK 2 — DataTable (Compound Components)
- * Build a <DataTable> using the compound components pattern.
- * - DataTable, DataTable.Head, DataTable.Body, DataTable.Row, DataTable.Cell
- * - Parent shares state/context with children implicitly — no prop drilling
- * - Usage:
- *     <DataTable>
- *       <DataTable.Head>...</DataTable.Head>
- *       <DataTable.Body>...</DataTable.Body>
- *     </DataTable>
+ *
+ * Build a DataTable using the compound components pattern, where sub-components
+ * (Head, Body, Row, Cell) share state with the parent implicitly via context.
+ *
+ * Hooks: useContext, createContext
+ * Pattern: compound components
+ *
+ * DOCS: https://react.dev/reference/react/useContext
  */
-export function DataTable() { return null; }
+
+export function DataTable() {
+  // Build your component here
+  return null;
+}

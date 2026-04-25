@@ -1,15 +1,18 @@
 /*
- * TASK 1-5 — ContactForm
- * Build a <ContactForm> with name, email, and message fields.
+ * TASKS 1-5 — ContactForm
  *
- * TASKS:
- * 1. Manage all fields in a single state object with one onChange handler
- * 2. Validate on submit: all fields required, valid email format
- *    Show inline field-level errors. Block submit if invalid.
- * 3. Add a <Select> dropdown (e.g. subject) and a <Checkbox> group (e.g. preferences)
- * 4. Derive isFormValid during render — do NOT use useEffect for this
- * 5. Type all event handlers with React.ChangeEventHandler<HTMLInputElement> etc.
+ * Build a contact form with name, email, message, a subject dropdown, and
+ * a preferences checkbox group. Validate all fields on submit and show
+ * inline errors. Derive form validity during render.
+ *
+ * Hooks: useState
+ * Key patterns: single onChange handler, object state, derived validation state
+ * TypeScript: React.ChangeEventHandler<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
  *
  * DOCS: https://react.dev/reference/react-dom/components/input
  */
-export function ContactForm() { return null; }
+
+export function ContactForm() {
+  // Build your component here
+  return null;
+}

@@ -1,16 +1,14 @@
 /*
  * TASK 4 — SearchWithCache
- * Build a search component that caches previous results to avoid redundant fetches.
  *
- * - Store results in a useRef cache: Map<string, Result[]>
- * - On each search, check the cache before fetching
- * - If cached, render immediately with no loading state
- * - If not cached, fetch, then store in the cache
+ * Build a search component that avoids redundant fetches by caching previous results.
+ * The cache should persist across renders without triggering re-renders when updated.
  *
- * WHY useRef for the cache?
- * - The cache should persist across renders but NOT trigger re-renders when updated
- * - That's exactly what refs are for
- *
+ * Hooks: useState, useEffect, useRef
  * API: https://jsonplaceholder.typicode.com/posts?q={query}
  */
-export function SearchWithCache() { return null; }
+
+export function SearchWithCache() {
+  // Build your component here
+  return null;
+}

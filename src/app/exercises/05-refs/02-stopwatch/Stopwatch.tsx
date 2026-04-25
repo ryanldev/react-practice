@@ -1,8 +1,15 @@
 /*
  * TASK 2 — Stopwatch
- * Use useRef to persist the interval ID across renders without causing re-renders.
- * - intervalRef = useRef<number | null>(null)
- * - Unlike state, mutating a ref does NOT trigger a re-render
- * - Store the interval ID in the ref so start/stop functions can reference it
+ *
+ * Build a stopwatch with start, stop, and reset controls.
+ * The interval ID should persist across renders without causing re-renders.
+ *
+ * Hooks: useRef, useState
+ *
+ * DOCS: https://react.dev/reference/react/useRef
  */
-export function Stopwatch() { return null; }
+
+export function Stopwatch() {
+  // Build your component here
+  return null;
+}

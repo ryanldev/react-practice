@@ -1,16 +1,18 @@
 /*
- * TASK 1-2 — ErrorBoundary
- * Build an <ErrorBoundary> class component.
+ * TASKS 1, 2 & 4 — ErrorBoundary
  *
- * - Must be a class component — hooks cannot catch render errors
- * - Implement getDerivedStateFromError to update state when an error is caught
- * - Implement componentDidCatch for logging
- * - Accept a fallback prop: fallback={<p>Something went wrong</p>}
- * - TASK 4: Wrap individual sections to contain failures granularly
+ * Build a reusable ErrorBoundary class component that accepts a fallback prop.
+ * Use it to wrap individual sections of the UI for granular error containment.
+ *
+ * Pattern: class component (required — hooks cannot catch render errors)
+ * Lifecycle methods: getDerivedStateFromError, componentDidCatch
  *
  * DOCS: https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
  */
+
 import { Component, ReactNode } from "react";
+
 export class ErrorBoundary extends Component<{ fallback: ReactNode; children: ReactNode }> {
+  // Build your error boundary here
   render() { return this.props.children; }
 }

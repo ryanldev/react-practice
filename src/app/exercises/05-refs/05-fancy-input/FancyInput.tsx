@@ -1,10 +1,16 @@
 /*
  * TASK 5 — FancyInput with useImperativeHandle
- * Expose a custom API from a component instead of the raw DOM node.
- * - useImperativeHandle(ref, () => ({ focus, clear, shake }))
- * - Lets the parent call input.focus() or input.clear() without exposing the DOM element
- * - Use case: encapsulating DOM access inside the component
+ *
+ * Build an input component that exposes a custom API to parent components
+ * (e.g. focus, clear) rather than the raw DOM node.
+ *
+ * Hooks: useImperativeHandle, useRef
+ * API: forwardRef
  *
  * DOCS: https://react.dev/reference/react/useImperativeHandle
  */
-export function FancyInput() { return null; }
+
+export function FancyInput() {
+  // Build your component here
+  return null;
+}

@@ -1,8 +1,16 @@
 /*
- * TASK 3 — Tabs (Compound Components or Render Props)
- * Build a <Tabs> component.
- * - Option A: Compound components — Tabs, Tabs.List, Tabs.Tab, Tabs.Panel
- * - Option B: Render props — <Tabs render={({ activeTab }) => ...} />
- * - Active tab state lives in the parent Tabs component, shared via context
+ * TASK 3 — Tabs
+ *
+ * Build a Tabs component using either compound components or render props.
+ * Active tab state should live in the parent and be shared with children
+ * without prop drilling.
+ *
+ * Hooks: useState, useContext, createContext
+ *
+ * DOCS: https://react.dev/reference/react/useContext
  */
-export function Tabs() { return null; }
+
+export function Tabs() {
+  // Build your component here
+  return null;
+}

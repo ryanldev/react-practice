@@ -1,17 +1,16 @@
 /*
- * TASK 2-3 — MultiStepForm
- * Build a multi-step form wizard using useReducer.
+ * TASKS 2-3 — MultiStepForm
  *
- * Steps: Personal Info → Contact Info → Review → Submit
- * State: { step: number, data: { firstName, lastName, email, phone } }
- * Actions: { type: 'NEXT' }, { type: 'BACK' }, { type: 'UPDATE', field, value }
+ * Build a multi-step form wizard (Personal Info → Contact Info → Review → Submit)
+ * using useReducer. Type the actions as a discriminated union.
  *
- * Type the reducer with discriminated union actions:
- *   type Action =
- *     | { type: 'NEXT' }
- *     | { type: 'BACK' }
- *     | { type: 'UPDATE'; field: string; value: string }
+ * Hooks: useReducer
+ * TypeScript: discriminated union action types
  *
  * DOCS: https://react.dev/reference/react/useReducer
  */
-export function MultiStepForm() { return null; }
+
+export function MultiStepForm() {
+  // Build your component here
+  return null;
+}

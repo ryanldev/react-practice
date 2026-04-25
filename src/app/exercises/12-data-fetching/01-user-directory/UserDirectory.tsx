@@ -1,18 +1,18 @@
 /*
- * TASK 1-3 — UserDirectory
- * Fetch and display paginated users with race condition handling and optimistic updates.
+ * TASKS 1-3 — UserDirectory
  *
- * TASK 1: Paginated fetch from https://jsonplaceholder.typicode.com/users
- *   - Prev/Next buttons, disable at boundaries
- *   - Loading and error states
+ * Build a paginated user list with prev/next navigation, loading and error states.
+ * Cancel stale requests when the page changes quickly.
+ * Add optimistic delete: remove a user immediately and restore on failure.
  *
- * TASK 2: Handle race conditions
- *   - Use AbortController to cancel stale requests when page changes quickly
- *
- * TASK 3: Optimistic updates
- *   - Add a "delete" button that removes the user immediately
- *   - If the DELETE request fails, restore the user and show an error
+ * Hooks: useState, useEffect
+ * Browser API: AbortController
+ * API: https://jsonplaceholder.typicode.com/users
  *
  * DOCS: https://react.dev/learn/synchronizing-with-effects
  */
-export function UserDirectory() { return null; }
+
+export function UserDirectory() {
+  // Build your component here
+  return null;
+}

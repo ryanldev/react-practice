@@ -1,12 +1,15 @@
 /*
  * PATTERN 2 — Key Prop for Resetting State
- * Changing the key prop on a component forces React to unmount and remount it,
- * resetting all internal state.
  *
- * Demo: A <CommentBox> that should clear when you navigate to a different post.
- * - WRONG: useEffect(() => setComment(''), [postId])
- * - RIGHT: <CommentBox key={postId} />
+ * Build a comment box that clears when the user navigates to a different post,
+ * using the key prop rather than a useEffect to reset state.
+ *
+ * Hooks: useState
  *
  * DOCS: https://react.dev/learn/preserving-and-resetting-state
  */
-export function KeyResetDemo() { return null; }
+
+export function KeyResetDemo() {
+  // Build your demo here
+  return null;
+}

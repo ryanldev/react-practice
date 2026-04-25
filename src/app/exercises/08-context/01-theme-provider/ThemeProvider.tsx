@@ -1,11 +1,20 @@
 /*
  * TASK 1 — ThemeProvider
- * Build a <ThemeProvider> and useTheme() custom hook.
- * - Context holds: theme ('light' | 'dark') and toggleTheme()
- * - useTheme() throws if used outside the provider
- * - Apply theme class to root element or use CSS variables
+ *
+ * Build a ThemeProvider and a useTheme() custom hook that exposes the current
+ * theme and a toggle function. The hook should throw if used outside the provider.
+ *
+ * Hooks: createContext, useContext, useState
  *
  * DOCS: https://react.dev/reference/react/useContext
  */
-export function ThemeProvider({ children }: { children: React.ReactNode }) { return <>{children}</>; }
-export function useTheme() { throw new Error("useTheme must be used within ThemeProvider"); }
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  // Build your provider here
+  return <>{children}</>;
+}
+
+export function useTheme() {
+  // Build your hook here
+  throw new Error("useTheme must be used within ThemeProvider");
+}

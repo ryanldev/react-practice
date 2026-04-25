@@ -1,21 +1,13 @@
 /*
  * TASK 3 — MeasuredBox
  *
- * Build a <MeasuredBox> using useLayoutEffect.
+ * Render a box with dynamic content and display its measured height in real time.
+ * The measurement should happen before the browser paints to avoid visual flicker.
  *
- * - Render a box with dynamic content, measure its height with getBoundingClientRect()
- * - useLayoutEffect runs synchronously AFTER DOM mutation but BEFORE the browser paints
- * - Use case: measuring DOM elements to position tooltips, adjust layout, prevent visual flicker
+ * Hooks: useLayoutEffect, useRef, useState
+ * DOM API: getBoundingClientRect()
  *
- * WHY NOT useEffect?
- * - useEffect would cause a visible flash: render → paint → measure → re-render
- * - useLayoutEffect prevents it:         render → measure → re-render → paint
- *
- * RULE: use useEffect by default. Only reach for useLayoutEffect when you need
- * to measure or mutate the DOM before the browser paints.
- *
- * DOCS:
- * - useLayoutEffect: https://react.dev/reference/react/useLayoutEffect
+ * DOCS: https://react.dev/reference/react/useLayoutEffect
  */
 
 export function MeasuredBox() {

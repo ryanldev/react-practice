@@ -1,9 +1,15 @@
 /*
  * TASK 4 — Polymorphic Button
- * Build a <Button> that renders as any element via an `as` prop.
- * - <Button as="a" href="/home">Link</Button> → renders an <a>
- * - <Button as="button" onClick={...}>Click</Button> → renders a <button>
- * - The props should match the element type (href only valid when as="a" etc.)
- * - Use generics to type this correctly
+ *
+ * Build a Button component that can render as any HTML element via an `as` prop,
+ * with props typed correctly for each element.
+ *
+ * TypeScript: generics, React.ComponentPropsWithoutRef
+ *
+ * DOCS: https://react.dev/learn/passing-props-to-a-component
  */
-export function Button() { return null; }
+
+export function Button() {
+  // Build your component here
+  return null;
+}

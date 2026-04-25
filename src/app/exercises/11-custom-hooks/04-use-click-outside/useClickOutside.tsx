@@ -1,18 +1,21 @@
 /*
  * TASK 4 — useClickOutside
- * Build a hook that calls a handler when a click occurs outside a ref'd element.
  *
- * function useClickOutside(ref: RefObject<HTMLElement>, handler: () => void): void
+ * Build a hook that fires a callback when the user clicks outside a given element.
  *
- * - Add a mousedown listener to the document
- * - If the click target is not inside ref.current, call handler
- * - Remove the listener on cleanup
+ * Signature: useClickOutside(ref: RefObject<HTMLElement>, handler: () => void): void
  *
- * Usage:
- *   const ref = useRef(null)
- *   useClickOutside(ref, () => setOpen(false))
- *   return <div ref={ref}>...</div>
+ * Hooks: useEffect
+ * Browser API: document.addEventListener / removeEventListener
  */
+
 import { RefObject } from "react";
-export function useClickOutside(ref: RefObject<HTMLElement | null>, handler: () => void): void {}
-export function UseClickOutsideDemo() { return null; }
+
+export function useClickOutside(ref: RefObject<HTMLElement | null>, handler: () => void): void {
+  // Build your hook here
+}
+
+export function UseClickOutsideDemo() {
+  // Build a demo component here
+  return null;
+}

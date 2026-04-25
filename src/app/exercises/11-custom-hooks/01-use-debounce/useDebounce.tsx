@@ -1,14 +1,20 @@
 /*
  * TASK 1 — useDebounce
- * Build a hook that delays updating a value until after a specified delay.
  *
- * function useDebounce<T>(value: T, delay: number): T
+ * Build a hook that returns a debounced version of any value — one that only
+ * updates after the user stops changing it for a given delay.
  *
- * - Store the debounced value in state
- * - useEffect: set a timeout to update it, clear on cleanup
- * - Return the debounced value — it only updates after the user stops changing it
+ * Signature: useDebounce<T>(value: T, delay: number): T
  *
- * Usage: const debouncedQuery = useDebounce(query, 300)
+ * Hooks: useState, useEffect
  */
-export function useDebounce<T>(value: T, delay: number): T { return value; }
-export function UseDebounceDemo() { return null; }
+
+export function useDebounce<T>(value: T, delay: number): T {
+  // Build your hook here
+  return value;
+}
+
+export function UseDebounceDemo() {
+  // Build a demo component here
+  return null;
+}

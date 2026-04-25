@@ -1,12 +1,15 @@
 /*
  * TASK 3 — BuggyComponent
- * Build a component that throws on purpose to test the ErrorBoundary.
  *
- * - Add a button that sets a state flag
- * - When the flag is true, throw an error during render
- * - Wrap it in <ErrorBoundary> to catch it gracefully
+ * Build a component that throws an error during render on purpose,
+ * to verify that an ErrorBoundary catches it gracefully.
  *
- * NOTE: Errors thrown in event handlers are NOT caught by ErrorBoundary.
- * Only errors thrown during render, in lifecycle methods, or in constructors are caught.
+ * Hooks: useState
+ *
+ * DOCS: https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
  */
-export function BuggyComponent() { return null; }
+
+export function BuggyComponent() {
+  // Build your component here
+  return null;
+}

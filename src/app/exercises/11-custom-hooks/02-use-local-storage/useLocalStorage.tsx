@@ -1,15 +1,20 @@
 /*
  * TASK 2 — useLocalStorage
- * Build a hook that syncs state with localStorage.
  *
- * function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => void]
+ * Build a hook that works like useState but persists the value to localStorage.
+ * Handle JSON serialization and the case where localStorage is unavailable (SSR).
  *
- * - Initialize state from localStorage.getItem(key) if it exists
- * - Wrap the setter to also call localStorage.setItem
- * - Handle JSON serialization/deserialization
- * - Handle SSR (localStorage is not available on the server)
+ * Signature: useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => void]
+ *
+ * Hooks: useState
  */
+
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (val: T) => void] {
+  // Build your hook here
   return [initialValue, () => {}];
 }
-export function UseLocalStorageDemo() { return null; }
+
+export function UseLocalStorageDemo() {
+  // Build a demo component here
+  return null;
+}

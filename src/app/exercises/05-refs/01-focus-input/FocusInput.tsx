@@ -1,7 +1,14 @@
 /*
  * TASK 1 — FocusInput
- * Auto-focus an input on mount using useRef.
- * - Create a ref with useRef<HTMLInputElement>(null)
- * - Call ref.current.focus() inside useEffect with empty deps []
+ *
+ * Build an input that automatically receives focus when the component mounts.
+ *
+ * Hooks: useRef, useEffect
+ *
+ * DOCS: https://react.dev/reference/react/useRef
  */
-export function FocusInput() { return null; }
+
+export function FocusInput() {
+  // Build your component here
+  return null;
+}
