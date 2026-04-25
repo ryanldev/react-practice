@@ -17,7 +17,21 @@
  * - Synchronizing with Effects: https://react.dev/learn/synchronizing-with-effects
  */
 
+import styles from './Clock.module.css';
+import { useEffect, useState } from 'react';
+
 export function Clock() {
-  // Build your component here
-  return null;
+  const [ currentTime, setCurrentTime ] = useState<Date>(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000)
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className={styles.clock}>{currentTime.toLocaleTimeString()}</div>
+  )
 }

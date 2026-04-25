@@ -13,8 +13,8 @@
  * DOCS: https://react.dev/learn/synchronizing-with-effects
  */
 
-import { UserDirectory } from "./user-directory/UserDirectory";
-import { SearchWithCache } from "./search-with-cache/SearchWithCache";
+import { UserDirectory } from "./01-user-directory/UserDirectory";
+import { SearchWithCache } from "./02-search-with-cache/SearchWithCache";
 
 const sectionStyle = { marginBottom: "3rem" };
 

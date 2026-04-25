@@ -22,10 +22,10 @@
 
 const sectionStyle = { marginBottom: "3rem" };
 
-import { Clock } from "./clock/Clock";
-import { WindowSize } from "./window-size/WindowSize";
-import { MeasuredBox } from "./measured-box/MeasuredBox";
-import { DebounceSearch } from "./debounce-search/DebounceSearch";
+import { Clock } from "./01-clock/Clock";
+import { WindowSize } from "./02-window-size/WindowSize";
+import { MeasuredBox } from "./03-measured-box/MeasuredBox";
+import { DebounceSearch } from "./04-debounce-search/DebounceSearch";
 
 export default function EffectsExercise() {
   return (

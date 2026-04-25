@@ -12,8 +12,8 @@
  * DOCS: https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary
  */
 
-import { ErrorBoundary } from "./error-boundary/ErrorBoundary";
-import { BuggyComponent } from "./buggy-component/BuggyComponent";
+import { ErrorBoundary } from "./01-error-boundary/ErrorBoundary";
+import { BuggyComponent } from "./02-buggy-component/BuggyComponent";
 
 const sectionStyle = { marginBottom: "3rem" };
 

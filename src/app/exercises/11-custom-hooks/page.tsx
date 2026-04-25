@@ -12,10 +12,10 @@
  * DOCS: https://react.dev/learn/reusing-logic-with-custom-hooks
  */
 
-import { UseDebounceDemo } from "./use-debounce/useDebounce";
-import { UseLocalStorageDemo } from "./use-local-storage/useLocalStorage";
-import { UseFetchDemo } from "./use-fetch/useFetch";
-import { UseClickOutsideDemo } from "./use-click-outside/useClickOutside";
+import { UseDebounceDemo } from "./01-use-debounce/useDebounce";
+import { UseLocalStorageDemo } from "./02-use-local-storage/useLocalStorage";
+import { UseFetchDemo } from "./03-use-fetch/useFetch";
+import { UseClickOutsideDemo } from "./04-use-click-outside/useClickOutside";
 
 const sectionStyle = { marginBottom: "3rem" };
 

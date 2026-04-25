@@ -17,11 +17,11 @@
  * - useImperativeHandle: https://react.dev/reference/react/useImperativeHandle
  */
 
-import { FocusInput } from "./focus-input/FocusInput";
-import { Stopwatch } from "./stopwatch/Stopwatch";
-import { PreviousValueDemo } from "./previous-value/PreviousValue";
-import { TextInput } from "./text-input/TextInput";
-import { FancyInput } from "./fancy-input/FancyInput";
+import { FocusInput } from "./01-focus-input/FocusInput";
+import { Stopwatch } from "./02-stopwatch/Stopwatch";
+import { PreviousValueDemo } from "./03-previous-value/PreviousValue";
+import { TextInput } from "./04-text-input/TextInput";
+import { FancyInput } from "./05-fancy-input/FancyInput";
 
 const sectionStyle = { marginBottom: "3rem" };
 

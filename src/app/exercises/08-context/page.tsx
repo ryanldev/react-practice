@@ -12,8 +12,8 @@
  * DOCS: https://react.dev/reference/react/useContext
  */
 
-import { ThemeProvider, useTheme } from "./theme-provider/ThemeProvider";
-import { NotificationProvider, useNotifications } from "./notification-provider/NotificationProvider";
+import { ThemeProvider, useTheme } from "./01-theme-provider/ThemeProvider";
+import { NotificationProvider, useNotifications } from "./02-notification-provider/NotificationProvider";
 
 const sectionStyle = { marginBottom: "3rem" };
 

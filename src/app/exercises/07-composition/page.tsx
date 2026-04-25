@@ -15,10 +15,10 @@
  * - Passing JSX as children: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children
  */
 
-import { Modal } from "./modal/Modal";
-import { DataTable } from "./data-table/DataTable";
-import { Tabs } from "./tabs/Tabs";
-import { Button } from "./button/Button";
+import { Modal } from "./01-modal/Modal";
+import { DataTable } from "./02-data-table/DataTable";
+import { Tabs } from "./03-tabs/Tabs";
+import { Button } from "./04-button/Button";
 
 const sectionStyle = { marginBottom: "3rem" };
 

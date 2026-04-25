@@ -12,8 +12,8 @@
  * DOCS: https://react.dev/reference/react/useReducer
  */
 
-import { TodoListReducer } from "./todo-list/TodoListReducer";
-import { MultiStepForm } from "./multi-step-form/MultiStepForm";
+import { TodoListReducer } from "./01-todo-list/TodoListReducer";
+import { MultiStepForm } from "./02-multi-step-form/MultiStepForm";
 
 const sectionStyle = { marginBottom: "3rem" };
 

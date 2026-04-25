@@ -13,7 +13,7 @@
  * DOCS: https://react.dev/reference/react-dom/components/input
  */
 
-import { ContactForm } from "./contact-form/ContactForm";
+import { ContactForm } from "./01-contact-form/ContactForm";
 
 const sectionStyle = { marginBottom: "3rem" };
 

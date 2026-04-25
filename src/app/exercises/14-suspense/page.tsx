@@ -15,9 +15,9 @@
  * - useDeferredValue: https://react.dev/reference/react/useDeferredValue
  */
 
-import { LazyComponentDemo } from "./lazy-component/LazyComponent";
-import { LazyTabs } from "./lazy-tabs/LazyTabs";
-import { TransitionsDemo } from "./transitions/Transitions";
+import { LazyComponentDemo } from "./01-lazy-component/LazyComponent";
+import { LazyTabs } from "./02-lazy-tabs/LazyTabs";
+import { TransitionsDemo } from "./03-transitions/Transitions";
 
 const sectionStyle = { marginBottom: "3rem" };
 

@@ -15,9 +15,9 @@
  * - Preserving and Resetting State: https://react.dev/learn/preserving-and-resetting-state
  */
 
-import { LiftingStateDemo } from "./lifting-state/LiftingState";
-import { KeyResetDemo } from "./key-reset/KeyReset";
-import { withAuth } from "./hoc/WithAuth";
+import { LiftingStateDemo } from "./01-lifting-state/LiftingState";
+import { KeyResetDemo } from "./02-key-reset/KeyReset";
+import { withAuth } from "./03-hoc/WithAuth";
 
 const sectionStyle = { marginBottom: "3rem" };
 

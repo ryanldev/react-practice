@@ -16,10 +16,10 @@
  * - useId: https://react.dev/reference/react/useId
  */
 
-import { Accordion } from "./accordion/Accordion";
-import { AccessibleTabs } from "./tabs/AccessibleTabs";
-import { AccessibleModal } from "./modal/AccessibleModal";
-import { LiveRegion } from "./live-region/LiveRegion";
+import { Accordion } from "./01-accordion/Accordion";
+import { AccessibleTabs } from "./02-tabs/AccessibleTabs";
+import { AccessibleModal } from "./03-modal/AccessibleModal";
+import { LiveRegion } from "./04-live-region/LiveRegion";
 
 const sectionStyle = { marginBottom: "3rem" };
 

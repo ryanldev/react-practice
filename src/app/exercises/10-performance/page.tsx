@@ -17,8 +17,8 @@
  * - React.memo: https://react.dev/reference/react/memo
  */
 
-import { FilterableList } from "./filterable-list/FilterableList";
-import { VirtualizedList } from "./virtualized-list/VirtualizedList";
+import { FilterableList } from "./01-filterable-list/FilterableList";
+import { VirtualizedList } from "./02-virtualized-list/VirtualizedList";
 
 const sectionStyle = { marginBottom: "3rem" };
 
