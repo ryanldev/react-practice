@@ -1,62 +1,40 @@
+"use client"
 // http://localhost:3000/exercises/12-data-fetching
 
 /*
  * EXERCISE 12: Data Fetching Patterns
  *
- * TASKS:
- * 1. Build a <UserDirectory> that fetches and displays paginated data
- *    - API: https://jsonplaceholder.typicode.com/users (10 users)
- *    - Or for pagination: https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10
- *    - Show loading skeleton/spinner while fetching
- *    - Show error state with a retry button
- *    - Previous/Next pagination buttons
- *
- * 2. Handle race conditions properly
- *    - If user clicks "Next" rapidly, multiple fetches fire simultaneously
- *    - Use AbortController to cancel the previous request:
- *      useEffect(() => {
- *        const controller = new AbortController();
- *        fetch(url, { signal: controller.signal }).then(...).catch(err => {
- *          if (err.name !== 'AbortError') setError(err);
- *        });
- *        return () => controller.abort();
- *      }, [page])
- *
- * 3. Implement optimistic updates
- *    - Add a "like" button to each post
- *    - On click: immediately update the UI (optimistic), then send the request
- *    - If the request fails: roll back the UI to the previous state
- *    - Pattern: save previous state → update optimistically → fetch → on error, restore
- *
- * 4. Build a <SearchWithCache> that caches previous search results
- *    - Use useRef to store a Map<string, Result[]> of previous results
- *    - On search: check cache first, only fetch if cache miss
- *    - Show cached results instantly, fetch in background for fresh data
- *
  * KEY CONCEPTS:
- * - NEVER do: useEffect(() => { fetch().then(data => setState(data)) }) without cleanup
- * - Always handle: loading, error, success states
- * - AbortController prevents setting state on unmounted components
- * - Race conditions are the #1 bug in React data fetching
- * - In production: use React Query, SWR, or Next.js Server Components instead of raw useEffect
+ * - Always handle loading, error, and success states
+ * - AbortController cancels stale in-flight requests on cleanup
+ * - Optimistic updates: apply change immediately, roll back on failure
+ * - Caching with useRef: persists across renders without triggering re-renders
  *
- * IMPORTANT: This file needs "use client" at the top.
- *
- * DOCS:
- * - useEffect: https://react.dev/reference/react/useEffect
- * - You Might Not Need an Effect: https://react.dev/learn/you-might-not-need-an-effect
- * - AbortController (MDN): https://developer.mozilla.org/en-US/docs/Web/API/AbortController
- * - Fetch API (MDN): https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ * DOCS: https://react.dev/learn/synchronizing-with-effects
  */
+
+import { UserDirectory } from "./user-directory/UserDirectory";
+import { SearchWithCache } from "./search-with-cache/SearchWithCache";
+
+const sectionStyle = { marginBottom: "3rem" };
 
 export default function DataFetchingExercise() {
   return (
     <div>
       <h1>Exercise 12: Data Fetching Patterns</h1>
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
-        Build your components below. Read the comments at the top of this file for instructions.
+        Build your components below. Each task lives in its own file.
       </p>
-      {/* START HERE */}
+      <section style={sectionStyle}>
+        <h2>Tasks 1-3 — UserDirectory</h2>
+        <p>Paginated fetch, race condition handling, and optimistic deletes. See <code>user-directory/UserDirectory.tsx</code>.</p>
+        <UserDirectory />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 4 — SearchWithCache</h2>
+        <p>Cache previous search results to avoid redundant fetches. See <code>search-with-cache/SearchWithCache.tsx</code>.</p>
+        <SearchWithCache />
+      </section>
     </div>
   );
 }

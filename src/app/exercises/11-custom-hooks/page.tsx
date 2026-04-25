@@ -1,62 +1,51 @@
+"use client"
 // http://localhost:3000/exercises/11-custom-hooks
 
 /*
  * EXERCISE 11: Custom Hooks
- * Svelte equivalent: Reusable stores / utility functions
- *
- * TASKS:
- * 1. Build useDebounce(value, delay)
- *    - Returns a debounced version of the value
- *    - Internally: useState for debounced value, useEffect with setTimeout/clearTimeout
- *    - Usage: const debouncedSearch = useDebounce(searchTerm, 300)
- *    - Use it to improve the DebounceSearch from Exercise 4
- *
- * 2. Build useLocalStorage<T>(key, initialValue)
- *    - Works like useState but persists to localStorage
- *    - Read from localStorage on init (with JSON.parse), fall back to initialValue
- *    - Write to localStorage on every state change (via useEffect)
- *    - Handle: SSR safety (typeof window check), JSON parse errors, storage events
- *    - Usage: const [theme, setTheme] = useLocalStorage("theme", "light")
- *
- * 3. Build useFetch<T>(url)
- *    - Returns { data: T | null, loading: boolean, error: Error | null }
- *    - Fetch on mount and when url changes
- *    - Handle: loading state, error state, cleanup with AbortController
- *    - Usage: const { data, loading, error } = useFetch<User[]>("/api/users")
- *
- * 4. Build useClickOutside(ref, handler)
- *    - Calls handler when a click occurs outside the referenced element
- *    - Useful for: closing dropdowns, modals, popovers
- *    - Usage: useClickOutside(dropdownRef, () => setOpen(false))
  *
  * KEY CONCEPTS:
- * - Custom hooks are just functions that call other hooks — they MUST start with "use"
- * - They share LOGIC, not state — each component calling the hook gets its own state
- * - This is React's primary reuse mechanism (replaces mixins, HOCs, render props for logic)
- * - Test them by testing the components that use them, or use @testing-library/react-hooks
+ * - Custom hooks extract reusable stateful logic into a function
+ * - Must start with "use" so React can enforce the rules of hooks
+ * - Can call other hooks internally
  *
- * FILE STRUCTURE HINT:
- * Create hooks in a shared location:
- *   /src/hooks/useDebounce.ts
- *   /src/hooks/useLocalStorage.ts
- *   /src/hooks/useFetch.ts
- *   /src/hooks/useClickOutside.ts
- *
- * IMPORTANT: This file needs "use client" at the top.
- *
- * DOCS:
- * - Reusing Logic with Custom Hooks: https://react.dev/learn/reusing-logic-with-custom-hooks
- * - Rules of Hooks: https://react.dev/reference/rules/rules-of-hooks
+ * DOCS: https://react.dev/learn/reusing-logic-with-custom-hooks
  */
+
+import { UseDebounceDemo } from "./use-debounce/useDebounce";
+import { UseLocalStorageDemo } from "./use-local-storage/useLocalStorage";
+import { UseFetchDemo } from "./use-fetch/useFetch";
+import { UseClickOutsideDemo } from "./use-click-outside/useClickOutside";
+
+const sectionStyle = { marginBottom: "3rem" };
 
 export default function CustomHooksExercise() {
   return (
     <div>
       <h1>Exercise 11: Custom Hooks</h1>
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
-        Build your components below. Read the comments at the top of this file for instructions.
+        Build your hooks below. Each lives in its own file with a demo component.
       </p>
-      {/* START HERE */}
+      <section style={sectionStyle}>
+        <h2>Task 1 — useDebounce</h2>
+        <p>Delays updating a value until after a delay. See <code>use-debounce/useDebounce.tsx</code>.</p>
+        <UseDebounceDemo />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 2 — useLocalStorage</h2>
+        <p>Syncs state with localStorage. See <code>use-local-storage/useLocalStorage.tsx</code>.</p>
+        <UseLocalStorageDemo />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 3 — useFetch</h2>
+        <p>Generic data fetching with loading/error/data states. See <code>use-fetch/useFetch.tsx</code>.</p>
+        <UseFetchDemo />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 4 — useClickOutside</h2>
+        <p>Calls a handler when clicking outside a ref'd element. See <code>use-click-outside/useClickOutside.tsx</code>.</p>
+        <UseClickOutsideDemo />
+      </section>
     </div>
   );
 }

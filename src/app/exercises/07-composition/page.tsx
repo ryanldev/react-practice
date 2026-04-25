@@ -1,77 +1,54 @@
+"use client"
 // http://localhost:3000/exercises/07-composition
 
 /*
  * EXERCISE 7: Component Composition
- * Interview favorite — tests architectural thinking
- *
- * TASKS:
- * 1. Build a <Modal> using children prop + React Portal
- *    - import { createPortal } from "react-dom"
- *    - Render the modal into document.body using createPortal(jsx, document.body)
- *    - Accept: isOpen, onClose, title, children
- *    - Why portal? So the modal renders outside its parent's DOM hierarchy
- *      (avoids z-index/overflow issues)
- *    - Add a backdrop overlay that closes on click
- *
- * 2. Build a <DataTable> using the compound components pattern
- *    - Usage should look like:
- *      <DataTable data={users}>
- *        <DataTable.Column header="Name" accessor="name" />
- *        <DataTable.Column header="Email" accessor="email" />
- *        <DataTable.Column header="Role" accessor="role" />
- *      </DataTable>
- *    - Use React.Children and cloneElement, OR context to share data between parent and children
- *    - Attach sub-components: DataTable.Column = ColumnComponent
- *
- * 3. Build a <Tabs> component using compound pattern or render props
- *    - <Tabs defaultValue="tab1">
- *        <Tabs.List>
- *          <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
- *          <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
- *        </Tabs.List>
- *        <Tabs.Content value="tab1">Content 1</Tabs.Content>
- *        <Tabs.Content value="tab2">Content 2</Tabs.Content>
- *      </Tabs>
- *    - Manage active tab state internally using context
- *
- * 4. Build a polymorphic <Button> with an `as` prop
- *    - <Button as="a" href="/about">Link Button</Button>
- *    - <Button as="button" onClick={fn}>Click Me</Button>
- *    - Use TypeScript generics to infer the correct props based on `as`
- *    - type ButtonProps<T extends React.ElementType> = { as?: T } & React.ComponentPropsWithoutRef<T>
  *
  * KEY CONCEPTS:
- * - Portals: createPortal(child, container) — renders outside parent DOM
- * - Compound components: related components share implicit state via context
- * - Polymorphic components: one component renders as different HTML elements
- * - children prop is React's equivalent of Svelte's <slot />
- * - Fragments (<></> or <React.Fragment>) — group elements without adding a DOM node
- *   return <><Header /><Main /><Footer /></>  // no wrapper div
- *
- * STYLING APPROACHES (know the trade-offs for interviews):
- * - CSS Modules (.module.css): scoped by default, used in this project, zero runtime cost
- * - CSS-in-JS (styled-components, emotion): co-located styles, dynamic, but adds runtime overhead
- * - Tailwind CSS: utility classes, fast development, but less readable JSX
- * - Inline styles: use sparingly, can't do pseudo-selectors or media queries
- * - For interviews: CSS Modules or plain CSS are safest — no extra deps needed
- *
- * IMPORTANT: This file needs "use client" at the top.
+ * - Portals: render outside the current DOM tree
+ * - Compound components: parent shares state with children via context
+ * - Render props: pass a function as a prop to share rendering logic
+ * - Polymorphic components: render as any element via an `as` prop
  *
  * DOCS:
- * - Passing JSX as Children: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children
  * - createPortal: https://react.dev/reference/react-dom/createPortal
- * - cloneElement: https://react.dev/reference/react/cloneElement
- * - Extracting State Logic into a Reducer: https://react.dev/learn/extracting-state-logic-into-a-reducer
+ * - Passing JSX as children: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children
  */
+
+import { Modal } from "./modal/Modal";
+import { DataTable } from "./data-table/DataTable";
+import { Tabs } from "./tabs/Tabs";
+import { Button } from "./button/Button";
+
+const sectionStyle = { marginBottom: "3rem" };
 
 export default function CompositionExercise() {
   return (
     <div>
       <h1>Exercise 7: Component Composition</h1>
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
-        Build your components below. Read the comments at the top of this file for instructions.
+        Build your components below. Each task lives in its own file.
       </p>
-      {/* START HERE */}
+      <section style={sectionStyle}>
+        <h2>Task 1 — Modal with Portal</h2>
+        <p>Renders children outside the DOM tree via createPortal. See <code>modal/Modal.tsx</code>.</p>
+        <Modal />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 2 — DataTable (Compound Components)</h2>
+        <p>Parent shares state with children implicitly. See <code>data-table/DataTable.tsx</code>.</p>
+        <DataTable />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 3 — Tabs</h2>
+        <p>Compound components or render props pattern. See <code>tabs/Tabs.tsx</code>.</p>
+        <Tabs />
+      </section>
+      <section style={sectionStyle}>
+        <h2>Task 4 — Polymorphic Button</h2>
+        <p>Renders as any element via an `as` prop. See <code>button/Button.tsx</code>.</p>
+        <Button />
+      </section>
     </div>
   );
 }

@@ -1,56 +1,14 @@
+"use client"
 // http://localhost:3000/exercises/16-interview-components
 
 /*
  * EXERCISE 16: Common Interview Components
  * These are the "build X in 45 minutes" problems — practice until muscle memory
  *
- * TASKS:
- * 1. Build an <Autocomplete> / Typeahead
- *    - Input field with a dropdown of suggestions
- *    - Fetch suggestions from: https://jsonplaceholder.typicode.com/users?q={query}
- *    - Debounce the fetch (300ms)
- *    - Keyboard navigation: Arrow Up/Down to move selection, Enter to select, Escape to close
- *    - Click outside to close the dropdown (useClickOutside from Exercise 11)
- *    - Show loading indicator while fetching
- *    - Highlight matching text in suggestions
- *    - ARIA: role="combobox", aria-expanded, aria-activedescendant, role="listbox" on dropdown
- *
- * 2. Build an <InfiniteScroll> list
- *    - Load 20 items initially
- *    - When the user scrolls near the bottom, load 20 more
- *    - Use IntersectionObserver on a sentinel element at the bottom:
- *      useEffect(() => {
- *        const observer = new IntersectionObserver(([entry]) => {
- *          if (entry.isIntersecting) loadMore();
- *        });
- *        observer.observe(sentinelRef.current);
- *        return () => observer.disconnect();
- *      }, [])
- *    - Show a loading spinner at the bottom while fetching
- *    - Handle: no more items, error during fetch
- *    - API: https://jsonplaceholder.typicode.com/posts?_page={page}&_limit=20
- *
- * 3. Build a <Tooltip> / Popover
- *    - Appears on hover (tooltip) or click (popover)
- *    - Positioned relative to the trigger element (above, below, left, right)
- *    - Use getBoundingClientRect() to calculate position
- *    - Render via Portal (createPortal) to avoid overflow issues
- *    - Dismiss on: click outside, Escape key, scroll
- *    - Add a small arrow/caret pointing to the trigger
- *
- * 4. Build a <SortableList> with drag and drop
- *    - List of items that can be reordered by dragging
- *    - Use HTML drag and drop API: draggable, onDragStart, onDragOver, onDrop
- *    - Visual feedback: show insertion point while dragging
- *    - Update the list order on drop
- *    - Alternative: implement with pointer events for mobile support
- *
  * KEY CONCEPTS:
  * - These components combine multiple React concepts: state, effects, refs, events, a11y
  * - Focus on getting a working version first, then polish
  * - Interview tip: talk through your approach before coding, name the hooks you'll need
- *
- * IMPORTANT: This file needs "use client" at the top.
  *
  * DOCS:
  * - Combobox Pattern (WAI-ARIA): https://www.w3.org/WAI/ARIA/apg/patterns/combobox/
@@ -59,14 +17,64 @@
  * - getBoundingClientRect (MDN): https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
  */
 
+const sectionStyle = { marginBottom: "3rem" };
+
+import { SearchFilterList } from "./q1-search-filter-list/Q1SearchFilterList";
+import { UserForm } from "./q2-user-form/Q2UserForm";
+import { DependentDropdowns } from "./q3-dependent-dropdowns/Q3DependentDropdowns";
+import { SearchProvider, SearchInput, SearchResults } from "./q4-autocomplete/Q4Autocomplete";
+
 export default function InterviewComponentsExercise() {
   return (
     <div>
       <h1>Exercise 16: Common Interview Components</h1>
       <p style={{ color: "var(--muted)", marginBottom: 24 }}>
-        Build your components below. Read the comments at the top of this file for instructions.
+        Four questions in increasing difficulty. Each maps to real problems asked
+        in frontend interviews. Build each component in its own file.
       </p>
-      {/* START HERE */}
+
+      {/* ─── Q 1 ────────────────────────────────────────────────────── */}
+      <section style={sectionStyle}>
+        <h2>Q1 — Search & Filter List (Easy)</h2>
+        <p>
+          Fetch 20 posts and render a filterable list with loading/error states.
+          See <code>q1-search-filter-list/Q1SearchFilterList.tsx</code> for the full brief.
+        </p>
+        <SearchFilterList />
+      </section>
+
+      {/* ─── Q 2 ────────────────────────────────────────────────────── */}
+      <section style={sectionStyle}>
+        <h2>Q2 — Multi-Field Form with Validation & Optimistic Submit (Medium)</h2>
+        <p>
+          Build a user profile form with validation and optimistic UI.
+          See <code>q2-user-form/Q2UserForm.tsx</code> for the full brief.
+        </p>
+        <UserForm />
+      </section>
+
+      {/* ─── Q 3 ────────────────────────────────────────────────────── */}
+      <section style={sectionStyle}>
+        <h2>Q3 — Dependent Dropdown Selects (Medium)</h2>
+        <p>
+          Two chained selects where choosing a continent triggers a second fetch.
+          See <code>q3-dependent-dropdowns/Q3DependentDropdowns.tsx</code> for the full brief.
+        </p>
+        <DependentDropdowns />
+      </section>
+
+      {/* ─── Q 4 ────────────────────────────────────────────────────── */}
+      <section style={sectionStyle}>
+        <h2>Q4 — Autocomplete with Debounce & Shared State (Hard)</h2>
+        <p>
+          A debounced search input and results panel sharing state via Context.
+          See <code>q4-autocomplete/Q4Autocomplete.tsx</code> for the full brief.
+        </p>
+        <SearchProvider>
+          <SearchInput />
+          <SearchResults />
+        </SearchProvider>
+      </section>
     </div>
   );
 }
