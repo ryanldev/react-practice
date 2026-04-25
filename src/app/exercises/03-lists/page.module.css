@@ -1,0 +1,31 @@
+.todoListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 400px;
+  width: 500px;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.resetButton {
+  all: unset;
+  cursor: pointer;
+}
+
+.todoFilterContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.todoContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
