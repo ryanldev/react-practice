@@ -10,7 +10,29 @@
  * DOCS: https://react.dev/reference/react/useEffect
  */
 
+import styles from './WindowSize.module.css';
+import { useEffect, useState } from 'react';
+
+type WindowState = {
+  height: number;
+  width: number;
+}
+
 export function WindowSize() {
-  // Build your component here
-  return null;
+  const [ windowState, setWindowState ] = useState<WindowState>({ height: 0, width: 0});
+
+  function handleResize() {
+    setWindowState({ height: window.innerHeight, width: window.innerWidth });
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    setWindowState({ height: window.innerHeight, width: window.innerWidth });
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div className={styles.windowTracker}>Height: {windowState.height} Width: {windowState.width}</div>
+  )
 }

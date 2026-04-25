@@ -23,6 +23,7 @@ import { SearchFilterList } from "./q1-search-filter-list/Q1SearchFilterList";
 import { UserForm } from "./q2-user-form/Q2UserForm";
 import { DependentDropdowns } from "./q3-dependent-dropdowns/Q3DependentDropdowns";
 import { SearchProvider, SearchInput, SearchResults } from "./q4-autocomplete/Q4Autocomplete";
+import { Dashboard } from "./q5-mini-dashboard/Q5MiniDashboard";
 
 export default function InterviewComponentsExercise() {
   return (
@@ -74,6 +75,16 @@ export default function InterviewComponentsExercise() {
           <SearchInput />
           <SearchResults />
         </SearchProvider>
+      </section>
+
+      {/* ─── Q 5 ────────────────────────────────────────────────────── */}
+      <section style={sectionStyle}>
+        <h2>Q5 — Mini Dashboard: Fetch + Multi-Component State (Hard)</h2>
+        <p>
+          Three sibling components sharing selected user state — UserList, PostList, and StatsBar.
+          See <code>q5-mini-dashboard/Q5MiniDashboard.tsx</code> for the full brief.
+        </p>
+        <Dashboard />
       </section>
     </div>
   );

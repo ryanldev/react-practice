@@ -6,7 +6,8 @@
  *
  * Hooks: createContext, useContext, useEffect, useState
  * Browser APIs: setTimeout / clearTimeout, AbortController
- * API: https://jsonplaceholder.typicode.com/posts?q={query}
+ * API: https://itunes.apple.com/search?term={query}&limit=10
+ * Response shape: { results: Array<{ trackName, artistName, collectionName, artworkUrl100 }> }
  *
  * STRETCH: keyboard navigation, result caching
  */

@@ -5,7 +5,8 @@
  * The cache should persist across renders without triggering re-renders when updated.
  *
  * Hooks: useState, useEffect, useRef
- * API: https://jsonplaceholder.typicode.com/posts?q={query}
+ * API: https://itunes.apple.com/search?term={query}&limit=10
+ * Response shape: { results: Array<{ trackName, artistName, collectionName }> }
  */
 
 export function SearchWithCache() {

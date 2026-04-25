@@ -7,7 +7,8 @@
  *
  * Hooks: useState, useEffect
  * Browser API: AbortController
- * API: https://jsonplaceholder.typicode.com/users
+ * API: https://jsonplaceholder.typicode.com/posts?_page={page}&_limit=5
+ *      (100 posts total → 20 pages, supports _page and _limit query params)
  *
  * DOCS: https://react.dev/learn/synchronizing-with-effects
  */
