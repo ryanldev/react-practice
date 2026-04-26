@@ -12,7 +12,6 @@
  */
 
 import styles from './Modal.module.css';
-import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
 type ModalProps = {
@@ -29,8 +28,6 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 }
 
 export function ModalDemo() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Wire up the button to open the modal and pass onClose to close it.
+  // Wire up a button to open the modal and pass onClose to close it.
   return null;
 }
