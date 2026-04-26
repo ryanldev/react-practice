@@ -18,3 +18,8 @@ export function useTheme() {
   // Build your hook here
   throw new Error("useTheme must be used within ThemeProvider");
 }
+
+export function ThemeDemo() {
+  // Use useTheme() to read the current theme and render a toggle button
+  return null;
+}

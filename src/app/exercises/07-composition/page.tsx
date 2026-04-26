@@ -15,10 +15,10 @@
  * - Passing JSX as children: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children
  */
 
-import { Modal } from "./01-modal/Modal";
-import { DataTable } from "./02-data-table/DataTable";
-import { Tabs } from "./03-tabs/Tabs";
-import { Button } from "./04-button/Button";
+import { ModalDemo } from "./01-modal/Modal";
+import { DataTableDemo } from "./02-data-table/DataTable";
+import { TabsDemo } from "./03-tabs/Tabs";
+import { ButtonDemo } from "./04-button/Button";
 
 const sectionStyle = { marginBottom: "3rem" };
 
@@ -32,22 +32,22 @@ export default function CompositionExercise() {
       <section style={sectionStyle}>
         <h2>Task 1 — Modal with Portal</h2>
         <p>Renders children outside the DOM tree via createPortal. See <code>modal/Modal.tsx</code>.</p>
-        <Modal />
+        <ModalDemo />
       </section>
       <section style={sectionStyle}>
         <h2>Task 2 — DataTable (Compound Components)</h2>
         <p>Parent shares state with children implicitly. See <code>data-table/DataTable.tsx</code>.</p>
-        <DataTable />
+        <DataTableDemo />
       </section>
       <section style={sectionStyle}>
         <h2>Task 3 — Tabs</h2>
         <p>Compound components or render props pattern. See <code>tabs/Tabs.tsx</code>.</p>
-        <Tabs />
+        <TabsDemo />
       </section>
       <section style={sectionStyle}>
         <h2>Task 4 — Polymorphic Button</h2>
         <p>Renders as any element via an `as` prop. See <code>button/Button.tsx</code>.</p>
-        <Button />
+        <ButtonDemo />
       </section>
     </div>
   );

@@ -13,3 +13,10 @@ export function Button() {
   // Build your component here
   return null;
 }
+
+export function ButtonDemo() {
+  // Render Button as different elements, e.g:
+  // <Button as="a" href="...">Link</Button>
+  // <Button as="button" onClick={...}>Click me</Button>
+  return null;
+}

@@ -14,3 +14,8 @@ export function DataTable() {
   // Build your component here
   return null;
 }
+
+export function DataTableDemo() {
+  // Use DataTable and its sub-components (Head, Body, Row, Cell) here
+  return null;
+}

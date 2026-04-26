@@ -14,3 +14,8 @@ export function Tabs() {
   // Build your component here
   return null;
 }
+
+export function TabsDemo() {
+  // Use Tabs and its sub-components (Tab, TabPanel) here
+  return null;
+}

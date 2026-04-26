@@ -11,7 +11,26 @@
  * DOCS: https://react.dev/reference/react-dom/createPortal
  */
 
-export function Modal() {
-  // Build your component here
+import styles from './Modal.module.css';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}
+
+export function Modal({ isOpen, onClose, children }: ModalProps) {
+  // Build your component here.
+  // Render the modal using createPortal into document.body.
+  // Close on backdrop click and Escape key (useEffect for the key listener).
+  return null;
+}
+
+export function ModalDemo() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Wire up the button to open the modal and pass onClose to close it.
   return null;
 }

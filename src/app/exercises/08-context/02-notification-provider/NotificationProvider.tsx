@@ -19,3 +19,9 @@ export function useNotifications() {
   // Build your hook here
   throw new Error("useNotifications must be used within NotificationProvider");
 }
+
+export function NotificationDemo() {
+  // Use useNotifications() to render a button that adds a notification
+  // and a list that displays and auto-dismisses them
+  return null;
+}
