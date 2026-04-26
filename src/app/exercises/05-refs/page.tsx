@@ -2,26 +2,25 @@
 // http://localhost:3000/exercises/05-refs
 
 /*
- * EXERCISE 5: useRef, forwardRef & Uncontrolled DOM
+ * EXERCISE 5: useRef & Uncontrolled DOM
  * Svelte equivalent: bind:this
  *
  * KEY CONCEPTS:
  * - useRef stores a mutable value that persists across renders without causing re-renders
  * - ref.current is the escape hatch to the real DOM node
- * - forwardRef lets parent components access a child's DOM node
+ * - In React 19, ref is passed as a regular prop — no forwardRef needed
  * - useImperativeHandle lets you control what the parent can access via the ref
  *
  * DOCS:
  * - useRef: https://react.dev/reference/react/useRef
- * - forwardRef: https://react.dev/reference/react/forwardRef
  * - useImperativeHandle: https://react.dev/reference/react/useImperativeHandle
  */
 
 import { FocusInput } from "./01-focus-input/FocusInput";
 import { Stopwatch } from "./02-stopwatch/Stopwatch";
 import { PreviousValueDemo } from "./03-previous-value/PreviousValue";
-import { TextInput } from "./04-text-input/TextInput";
-import { FancyInput } from "./05-fancy-input/FancyInput";
+import { TextInputDemo } from "./04-text-input/TextInput";
+import { FancyInputDemo } from "./05-fancy-input/FancyInput";
 
 const sectionStyle = { marginBottom: "3rem" };
 
@@ -48,14 +47,14 @@ export default function RefsExercise() {
         <PreviousValueDemo />
       </section>
       <section style={sectionStyle}>
-        <h2>Task 4 — TextInput with forwardRef</h2>
-        <p>Forward a ref to an inner input element. See <code>text-input/TextInput.tsx</code>.</p>
-        <TextInput placeholder="Forwarded ref input" />
+        <h2>Task 4 — TextInput with ref prop</h2>
+        <p>Pass a ref to a child component as a regular prop (React 19). See <code>text-input/TextInput.tsx</code>.</p>
+        <TextInputDemo />
       </section>
       <section style={sectionStyle}>
         <h2>Task 5 — FancyInput with useImperativeHandle</h2>
         <p>Expose a custom API via ref. See <code>fancy-input/FancyInput.tsx</code>.</p>
-        <FancyInput />
+        <FancyInputDemo />
       </section>
     </div>
   );

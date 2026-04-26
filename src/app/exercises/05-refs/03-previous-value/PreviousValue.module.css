@@ -1,0 +1,22 @@
+.countContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px;
+  gap: 10px;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+}
+
+.countButtonsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.countButton {
+  padding: 8px;
+  font-size: 20px;
+}

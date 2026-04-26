@@ -8,7 +8,17 @@
  * DOCS: https://react.dev/reference/react/useRef
  */
 
+import styles from './FocusInput.module.css';
+import { useEffect, useRef } from 'react';
+
 export function FocusInput() {
-  // Build your component here
-  return null;
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  return (
+    <input className={styles.focusedInput} ref={inputRef} />
+  );
 }
